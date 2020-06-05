@@ -1,8 +1,25 @@
 import React from 'react'
 
-function UserInput () {
+const UserInput = (props) => {
+
+    const inLineStyling = {
+        border: '2px solid red'
+    }
+    
     return (
-        <div>UserInput</div>
+        <div>
+            <form>
+                <label>
+                    <input 
+                    type="text" 
+                    onChange={props.change} 
+                    value={props.username}
+                    style={inLineStyling}
+                    />
+                </label>
+                
+            </form>
+        </div>
     )
 }
 
